@@ -22,14 +22,4 @@ public class DeckTest{
     assertEquals(52, deck.getCards().size());
   }
 
-  @Test
-  public void printCards(){
-    ArrayList cards = deck.getCards();
-    for(Object object : cards){
-      Card original = (Card) object;
-      System.out.println(original.getSuit());
-      System.out.println(original.getNumber());
-    }
-  }
-
 }

@@ -5,12 +5,23 @@ public class Dealer{
 
   private ArrayList<Card> deck;
 
-  public Dealer(){
-    
+  public Dealer(ArrayList<Card> deck){
+    this.deck = deck;
   }
 
-  public void addCard(Card card){
-    deck.add(card);
+  public ArrayList<Card> showDeck(){
+    return this.deck;
   }
+
+  public void shuffleDeck(){
+    Collections.shuffle(this.deck);
+  }
+
+  public Card dealCard(){
+    Card card = this.deck.remove(0);
+    return card;
+  }
+
+
 
 }
